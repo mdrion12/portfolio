@@ -22,20 +22,18 @@ const Home = () => {
                     </a>
 
                     {/* Download CV */}
-                    <a
-                        href="/RIONcv.pdf"
-                        download="Md_Rion_CV.pdf"
-                        className="btn-outline"
-                    >
-                        Download CV
-                    </a>
+
 
                 </div>
             </div>
 
             {/* Right Side */}
             <div className="home-image">
-                <img src="/public/images/WhatsApp Image 2026-03-13 at 7.37.38 PM.jpeg" alt="My Photo" />
+                {/* Public folder থেকে image load করা */}
+                <img
+                    src="/images/WhatsApp Image 2026-03-13 at 7.37.38 PM.jpeg"
+                    alt="My Photo"
+                />
             </div>
 
         </section>

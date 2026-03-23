@@ -4,37 +4,37 @@ import './Projects.css';
 const projects = [
     {
         title: 'Portfolio Website',
-        image: '/public/images/Screenshot 2026-03-23 144835.png',
+        image: '/images/Screenshot 2026-03-23 144835.png',
         demo: 'https://github.com/mdrion12/portfolio',
         github: 'https://github.com/yourusername/portfolio'
     },
     {
         title: 'Single Vendor E-commerce api',
-        image: '/public/images/pic.png',
+        image: '/images/pic.png',
         demo: '#',
         github: 'https://github.com/mdrion12/LichuShop'
     },
     {
         title: 'Blood Donation Web App',
-        image: '/public/images/blood.png',
+        image: '/images/blood.png',
         demo: 'https://reon.nstack.dev/icereddot/',
         github: 'https://github.com/mdrion12/upadted_web_app'
     },
     {
         title: 'Blog Platform',
-        image: '/public/images/blog.png',
+        image: '/images/blog.png',
         demo: '#',
         github: 'https://github.com/mdrion12/Blog'
     },
     {
         title: 'Todo App',
-        image: '/public/images/todo.png',
+        image: '/images/todo.png',
         demo: '#',
         github: 'https://github.com/mdrion12/todo_project'
     },
     {
         title: 'learning management sysytem (LMS)',
-        image: '/public/images/lms.png',
+        image: '/images/lms.png',
         demo: '#',
         github: 'https://github.com/mdrion12/lms_project_using_django'
     }
