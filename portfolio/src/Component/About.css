@@ -1,0 +1,214 @@
+/* ========================= */
+/* About Section Base Styling */
+/* ========================= */
+.about {
+    position: relative;
+    padding: 80px 20px;
+    /* left/right padding কমানো, balance ঠিক করার জন্য */
+    background: linear-gradient(135deg, #0d0f27, #020617);
+    color: #cbd5f5;
+    min-height: 90vh;
+    overflow: visible;
+    /* circle পুরো দেখানোর জন্য */
+    display: flex;
+    justify-content: flex-start;
+    /* content left-align করা */
+    align-items: center;
+    z-index: 1;
+}
+
+.about::before,
+.about::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.about::before {
+    width: 500px;
+    height: 500px;
+    background: #38bdf8;
+    top: -80px;
+    left: -80px;
+    animation: float 10s ease-in-out infinite alternate;
+}
+
+.about::after {
+    width: 350px;
+    height: 350px;
+    background: #f472b6;
+    bottom: -50px;
+    right: -50px;
+    animation: float 12s ease-in-out infinite alternate-reverse;
+}
+
+/* Content container */
+.about-text {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    /* left side space adjust */
+    margin-left: 40px;
+    /* left margin দিয়ে circle থেকে gap রাখা */
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Headings */
+.about-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.about-text h2 {
+    font-size: 26px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #f472b6;
+}
+
+/* Paragraphs and Lists */
+.about-text p,
+.about-text ul {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    list-style: disc;
+    margin-left: 25px;
+}
+
+/* CP Profile Links */
+.cp-link {
+    color: #38bdf8;
+    text-decoration: underline;
+    transition: color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+
+.cp-link:hover {
+    color: #f472b6;
+    transform: translateY(-2px);
+}
+
+/* YouTube Link */
+.youtube-link {
+    color: #f472b6;
+    text-decoration: underline;
+    transition: color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+
+.youtube-link:hover {
+    color: #38bdf8;
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* Animations */
+/* ========================= */
+@keyframes float {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    100% {
+        transform: translateY(25px) translateX(25px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* Mobile Responsive (≤768px) */
+/* ========================= */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-left: 0;
+        /* mobile এ centered */
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
+
+    .about-text h2 {
+        font-size: 22px;
+    }
+
+    .about-text ul {
+        margin-left: 15px;
+    }
+
+    .about::before {
+        width: 300px;
+        height: 300px;
+        top: -80px;
+        left: -80px;
+    }
+
+    .about::after {
+        width: 200px;
+        height: 200px;
+        bottom: -40px;
+        right: -40px;
+    }
+}
+
+/* ========================= */
+/* Tablet Responsive (769px - 1024px) */
+/* ========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        padding: 60px 40px;
+    }
+
+    .about-text h1 {
+        font-size: 38px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text {
+        margin-left: 30px;
+    }
+
+    .about::before {
+        width: 400px;
+        height: 400px;
+        top: -90px;
+        left: -90px;
+    }
+
+    .about::after {
+        width: 300px;
+        height: 300px;
+        bottom: -50px;
+        right: -50px;
+    }
+}

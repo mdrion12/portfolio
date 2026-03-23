@@ -1,0 +1,135 @@
+/* Section */
+.skills {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #020617, #0d0f27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Container */
+.skills-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Title */
+.skills-container h1 {
+    font-size: 48px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Subtitle */
+.skills-subtitle {
+    font-size: 18px;
+    color: #cbd5f5;
+    margin-bottom: 50px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Wrapper */
+.skills-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Track (Train effect) */
+.skills-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollSkills 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.skills-wrapper:hover .skills-track {
+    animation-play-state: paused;
+}
+
+/* Skill Card */
+.skill-card {
+    min-width: 200px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 2px solid #38bdf8;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 20px;
+    font-weight: bold;
+    color: #f472b6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.6);
+    border-color: #f472b6;
+    color: #38bdf8;
+}
+
+/* Glow animation */
+.skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: linear-gradient(45deg, transparent, #38bdf8, transparent);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.skill-card:hover::before {
+    opacity: 0.3;
+}
+
+/* Scroll animation */
+@keyframes scrollSkills {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .skills-container h1 {
+        font-size: 32px;
+    }
+
+    .skills-subtitle {
+        font-size: 16px;
+    }
+
+    .skill-card {
+        min-width: 140px;
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .skills-track {
+        gap: 15px;
+    }
+}
