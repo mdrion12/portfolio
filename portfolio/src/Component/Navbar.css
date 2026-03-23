@@ -1,32 +1,28 @@
-/* Navbar */
 .navbar {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: #020617;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 20px;
+    /* Mobile friendly padding */
+    background-color: #0f172a;
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
-/* Logo */
-.logo {
-    color: #38bdf8;
-}
-
-/* Nav Links */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 25px;
+    position: relative;
 }
 
 .nav-links li a {
     text-decoration: none;
-    color: white;
+    color: #cbd5f5;
+    font-weight: 500;
     transition: 0.3s;
 }
 
@@ -35,36 +31,31 @@
 }
 
 /* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
+.nav-links .dropdown-menu {
     position: absolute;
-    top: 30px;
+    top: 35px;
     left: 0;
-    background: #0d0f27;
+    background: #0f172a;
+    padding: 10px 0;
     list-style: none;
-    padding: 10px;
+    border-radius: 6px;
+    min-width: 150px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     display: none;
 }
 
-.dropdown-menu li {
-    padding: 5px 10px;
-}
-
-.dropdown:hover .dropdown-menu {
+.nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Hamburger */
+/* Hamburger (Mobile) */
 .menu-icon {
     display: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-/* Mobile */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -73,19 +64,34 @@
     .nav-links {
         position: absolute;
         top: 60px;
+        left: 0;
         right: 0;
-        background: #020617;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 220px;
+        background: #0f172a;
         flex-direction: column;
-        width: 200px;
-        display: none;
+        gap: 15px;
         padding: 20px;
+        display: none;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        z-index: 90;
     }
 
     .nav-links.open {
         display: flex;
     }
 
-    .dropdown-menu {
+    .nav-links .dropdown-menu {
         position: static;
+        display: none;
+        box-shadow: none;
+        padding-left: 15px;
+    }
+
+    .nav-links .dropdown.open .dropdown-menu {
+        display: flex;
+        flex-direction: column;
     }
 }

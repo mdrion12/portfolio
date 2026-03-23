@@ -4,33 +4,39 @@ import './Projects.css';
 const projects = [
     {
         title: 'Portfolio Website',
-        image: '/src/assets/Screenshot 2026-03-23 144835.png', // Change to your image
-        demo: '#', // Add live demo URL
+        image: '/public/images/Screenshot 2026-03-23 144835.png',
+        demo: 'https://github.com/mdrion12/portfolio',
         github: 'https://github.com/yourusername/portfolio'
     },
     {
         title: 'Single Vendor E-commerce api',
-        image: '/src/assets/pic.png', // Replace with screenshot
-        demo: '#', // Add live demo link
+        image: '/public/images/pic.png',
+        demo: '#',
         github: 'https://github.com/mdrion12/LichuShop'
     },
     {
         title: 'Blood Donation Web App',
-        image: '/src/assets/blood.png', // Replace with screenshot
-        demo: 'https://reon.nstack.dev/icereddot/', // Add live demo link
+        image: '/public/images/blood.png',
+        demo: 'https://reon.nstack.dev/icereddot/',
         github: 'https://github.com/mdrion12/upadted_web_app'
     },
     {
         title: 'Blog Platform',
-        image: '/src/assets/blog.png', // Replace with screenshot
-        demo: '#', // Add live demo link
+        image: '/public/images/blog.png',
+        demo: '#',
         github: 'https://github.com/mdrion12/Blog'
     },
     {
         title: 'Todo App',
-        image: '/src/assets/todo.png', // Replace with screenshot
-        demo: '#', // Add live demo link
+        image: '/public/images/todo.png',
+        demo: '#',
         github: 'https://github.com/mdrion12/todo_project'
+    },
+    {
+        title: 'learning management sysytem (LMS)',
+        image: '/public/images/lms.png',
+        demo: '#',
+        github: 'https://github.com/mdrion12/lms_project_using_django'
     }
 ];
 
